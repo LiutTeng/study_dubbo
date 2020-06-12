@@ -1,0 +1,14 @@
+dubbo:
+  protocol:
+    name: dubbo
+    port: 20880
+  registry:
+    protocol: zookeeper
+    address: zookeeper://106.13.181.6:2181
+  application:
+    name: study_dubbo
+  consumer:
+    timeout: 3000
+  scan:
+    base-packages: com.example.dubbo.service
+debug: true
