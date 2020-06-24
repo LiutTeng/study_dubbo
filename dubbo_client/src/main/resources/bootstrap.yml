@@ -1,0 +1,21 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: dubbo_client
+
+  cloud:
+    nacos:
+      server-addr: 106.13.181.6:8848
+      config:
+        namespace: 9c6b8156-d045-463d-8fe6-4658ce78d0cc
+        file-extension: yml
+
+dubbo:
+  application:
+    name: dubbo_client
+  registry:
+    address: nacos://106.13.181.6:8848
+  scan:
+    base-packages: com.example.demo.controller
